@@ -1,9 +1,9 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "Tu Script De Halloween",
-    LoadingTitle = "CaraleMoS",
-    LoadingSubtitle = "By TuNombre",
+    Name = "nose q poner",
+    LoadingTitle = "difficulty fling",
+    LoadingSubtitle = "By yeahafk",
     ConfigurationSaving = {
         Enabled = true,
         FolderName = "CaralemosConfig"
@@ -16,7 +16,7 @@ local autoCash = false
 local cashLoopActive = false
 
 Tab:CreateToggle({
-    Name = "auto cashbutton v2.5 (más estable)",
+    Name = "auto farm v3",
     CurrentValue = false,
     Flag = "AutoCashButtonV25",
     Callback = function(enabled)
