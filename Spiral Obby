@@ -1,0 +1,31 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Spiral Obby",
+    LoadingTitle = "Rayfield",
+    LoadingSubtitle = "by yeahafk",
+    ConfigurationSaving = { Enabled = false }
+})
+
+local MainTab = Window:CreateTab("Main", 4483362458)
+
+MainTab:CreateButton({
+    Name = "auto acabar obby (cuando le des resetea y apareceras al final",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local player = Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+        for i = 1, 100 do
+            local checkpoint = workspace.Checkpoints:FindFirstChild(tostring(i))
+            if checkpoint then
+                local touchInterest = checkpoint:FindFirstChild("TouchInterest")
+                if touchInterest then
+                    firetouchinterest(humanoidRootPart, touchInterest.Parent, 0)
+                    task.wait() -- Esperar 1 frame
+                    firetouchinterest(humanoidRootPart, touchInterest.Parent, 1)
+                end
+            end
+        end
+    end
+})
